@@ -13,7 +13,7 @@ const videosRoute = require("./routes/Videos");
 require("dotenv/config");
 
 //ROUTES
-const PORT = 3100;
+const PORT = process.env.PORT || 3100;
 
 //MIDDLEWARES
 app.use(bodyParser.json());
