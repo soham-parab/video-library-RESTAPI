@@ -24,15 +24,15 @@ app.use("/videos", videosRoute);
 app.use("/playlists", playlistRoute);
 
 app.get("/", (req, res) => {
-   res.send("juasdjaksd");
+  res.send("juasdjaksd");
 });
 
 mongoose.connect(
-   process.env.DB_CONNECTION,
-   { useNewUrlParser: true, useUnifiedTopology: true },
-   () => {
-      console.log("hello");
-   }
+  process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("hello");
+  }
 );
 
 app.listen(PORT);

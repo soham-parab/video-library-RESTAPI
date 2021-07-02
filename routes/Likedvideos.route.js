@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Likedvids = require("../models/likedvideos");
+const Likedvids = require("../models/likedvideos.model");
 
 //GET POSTS
 router.get("/", async (req, res) => {

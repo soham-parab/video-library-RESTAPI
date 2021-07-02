@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const Playlist = require("../models/playlist");
+const Playlist = require("../models/playlist.model");
 
 const { extend } = require("lodash");
 

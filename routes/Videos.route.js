@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const Videos = require("../models/videos");
+const Videos = require("../models/videos.model");
 
 console.log(Videos);
 
