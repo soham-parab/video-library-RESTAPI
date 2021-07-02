@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const likedVideosRoute = require("./routes/Likedvideos");
-const playlistRoute = require("./routes/Playlist");
-const watchLaterRoute = require("./routes/Watchlater");
-const videosRoute = require("./routes/Videos");
+const likedVideosRoute = require("./routes/Likedvideos.route");
+const playlistRoute = require("./routes/Playlist.route");
+const watchLaterRoute = require("./routes/Watchlater.route");
+const videosRoute = require("./routes/Videos.route");
 
 require("dotenv/config");
 
