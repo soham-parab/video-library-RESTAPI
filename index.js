@@ -9,7 +9,8 @@ const likedVideosRoute = require("./routes/Likedvideos.route");
 const playlistRoute = require("./routes/Playlist.route");
 const watchLaterRoute = require("./routes/Watchlater.route");
 const videosRoute = require("./routes/Videos.route");
-
+const loginRoute = require("./routes/LoginUser");
+const registerRoute = require("./routes/RegisterUser");
 const dotenv = require("dotenv/config");
 
 //ROUTES
@@ -22,8 +23,6 @@ app.use("/likedvideos", likedVideosRoute);
 app.use("/watchlater", watchLaterRoute);
 app.use("/videos", videosRoute);
 app.use("/playlists", playlistRoute);
-app.use("/login", playlistRoute);
-app.use("/register", playlistRoute);
 
 app.get("/", (req, res) => {
   res.send("juasdjaksd");
