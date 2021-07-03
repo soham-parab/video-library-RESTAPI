@@ -11,18 +11,21 @@ const watchLaterRoute = require("./routes/Watchlater.route");
 const videosRoute = require("./routes/Videos.route");
 const loginRoute = require("./routes/LoginUser");
 const registerRoute = require("./routes/RegisterUser");
-const dotenv = require("dotenv/config");
 
+require("dotenv/config");
 //ROUTES
 const PORT = process.env.PORT || 3100;
 
 //MIDDLEWARES
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/likedvideos", likedVideosRoute);
 app.use("/watchlater", watchLaterRoute);
 app.use("/videos", videosRoute);
 app.use("/playlists", playlistRoute);
+app.use("/login", loginRoute);
+app.use("/register", registerRoute);
 
 app.get("/", (req, res) => {
   res.send("juasdjaksd");
