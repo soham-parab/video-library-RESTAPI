@@ -4,7 +4,7 @@ const Videos = require("../models/videos.model");
 const verify = require("../middlewares/verifyToken");
 
 //GET POSTS
-router.get("/", verify, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const getVideos = await Videos.find();
     console.log(getVideos);
