@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   res.send("lets login in Vid Lib");
 });
 
-router.post("/signup", async (req, res) => {
+router.post("/register", async (req, res) => {
   console.log(req.body);
 
   // Joi validation

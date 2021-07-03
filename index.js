@@ -10,7 +10,7 @@ const playlistRoute = require("./routes/Playlist.route");
 const watchLaterRoute = require("./routes/Watchlater.route");
 const videosRoute = require("./routes/Videos.route");
 
-require("dotenv/config");
+const dotenv = require("dotenv/config");
 
 //ROUTES
 const PORT = process.env.PORT || 3100;
@@ -22,6 +22,8 @@ app.use("/likedvideos", likedVideosRoute);
 app.use("/watchlater", watchLaterRoute);
 app.use("/videos", videosRoute);
 app.use("/playlists", playlistRoute);
+app.use("/login", playlistRoute);
+app.use("/register", playlistRoute);
 
 app.get("/", (req, res) => {
   res.send("juasdjaksd");
