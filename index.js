@@ -1,8 +1,6 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
-const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const likedVideosRoute = require("./routes/Likedvideos.route");
@@ -18,7 +16,7 @@ const PORT = process.env.PORT || 3100;
 
 //MIDDLEWARES
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 app.use("/likedvideos", likedVideosRoute);
 app.use("/watchlater", watchLaterRoute);
