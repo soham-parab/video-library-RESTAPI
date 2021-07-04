@@ -2,7 +2,7 @@ const express = require("express");
 const Joi = require("joi");
 const router = express.Router();
 const User = require("../models/user.model");
-const { registerValidation } = require("../Middlewares/Validation");
+const { registerValidation } = require("../middlewares/validation");
 const bcrypt = require("bcryptjs");
 
 router.get("/", (req, res) => {
