@@ -7,7 +7,6 @@ const verify = require("../middlewares/verifyToken");
 router.get("/", async (req, res) => {
   try {
     const getVideos = await Videos.find();
-    console.log(getVideos);
     res.json(getVideos);
   } catch (err) {
     res.json({ message: err });
