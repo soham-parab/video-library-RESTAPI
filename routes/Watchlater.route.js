@@ -1,11 +1,10 @@
 const express = require("express");
-
+const verify = require("../middlewares/verifyToken");
 const router = express.Router();
-
 const WatchLater = require("../models/watchlater.model");
 
 //GET POSTS
-router.get("/", async (req, res) => {
+router.get("/", verify, async (req, res) => {
   try {
     const watchLaterVids = await WatchLater.find();
     res.json(watchLaterVids);
@@ -15,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 //SUBMITS POST
-router.post("/", async (req, res) => {
+router.post("/", verify, async (req, res) => {
   console.log(req.body._id);
   try {
     const videos = req.body;
@@ -27,7 +26,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:itemId", async (req, res) => {
+router.get("/:itemId", verify, async (req, res) => {
   try {
     const itemFound = await WatchLater.findById(req.params.itemId);
     res.json(itemFound);
@@ -36,7 +35,7 @@ router.get("/:itemId", async (req, res) => {
   }
 });
 
-router.delete("/:itemId", async (req, res) => {
+router.delete("/:itemId", verify, async (req, res) => {
   try {
     const removeItem = await WatchLater.remove({ _id: req.params.itemId });
 
@@ -47,7 +46,7 @@ router.delete("/:itemId", async (req, res) => {
   }
 });
 
-router.patch("/:prdId", async (req, res) => {
+router.patch("/:prdId", verify, async (req, res) => {
   try {
     const updatedPrd = await WatchLater.updateOne(
       { _id: req.params.prdId },
