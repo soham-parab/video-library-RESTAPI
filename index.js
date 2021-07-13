@@ -26,7 +26,7 @@ app.use("/login", loginRoute);
 app.use("/register", registerRoute);
 
 app.get("/", (req, res) => {
-  res.send("juasdjaksd");
+  res.send("Home!");
 });
 
 mongoose.connect(
