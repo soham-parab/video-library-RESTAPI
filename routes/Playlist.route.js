@@ -74,7 +74,7 @@ router.post("/delete", verify, async (req, res) => {
       playlistId,
       user: req.user._id,
     });
-
+    console.log(playlistId, videoId);
     // const oldVids = playlist.videos
     // const removeVideo = playlist.videos._id
     // console.log(removeVideo)

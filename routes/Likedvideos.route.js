@@ -6,7 +6,7 @@ const Likedvids = require("../models/likedvideos.model");
 //GET POSTS
 router.get("/", verify, async (req, res) => {
   try {
-    const likedVideos = await Likedvids.find({ user: req.user_id });
+    const likedVideos = await Likedvids.find({ user: req.user._id });
     res.json(likedVideos);
   } catch (err) {
     res.json({ message: err });
